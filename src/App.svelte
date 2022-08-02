@@ -1,9 +1,20 @@
-<h1>
-  haii
-</h1>
+<script>
+  import { Router, Route} from 'svelte-routing'
+  import { SvelteToast } from '@zerodevx/svelte-toast'
+  import Navbar from './lib/Navbar.svelte'
+  import Footer from './lib/Footer.svelte'
+  import Home from './routes/home.svelte'
+  import ErrorPage from './routes/error.svelte'
+  import Orders from './routes/orders.svelte'
+  import Portfolio from './routes/portfolio.svelte'
+</script>
 
-<style lang="scss">
-  h1 {
-    color: red;
-  }
-</style>
+<Navbar />
+<Router>
+  <Route path="/"><Home /></Route>
+  <Route path="/orders"><Orders /></Route>
+  <Route path="/portfolio"><Portfolio /></Route>
+  <Route path='*'><ErrorPage /></Route>
+</Router>
+<Footer />
+<SvelteToast />

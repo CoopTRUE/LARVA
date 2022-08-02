@@ -1,0 +1,16 @@
+.center {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+* {
+  color: white;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body {
+  @extend .center;
+  background-color: black;
+}
